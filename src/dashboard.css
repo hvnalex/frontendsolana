@@ -1,0 +1,108 @@
+/* Smooth transition for animations */
+* {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Neon-Themed Dashboard */
+body {
+  background: #0d0d0d;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Main Dashboard */
+.dashboard-container {
+  width: 360px;
+  padding: 20px;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  border-radius: 20px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+/* Title */
+.dashboard-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Featured Song */
+.featured-song {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+}
+
+.featured-song img {
+  width: 80px;
+  height: 80px;
+  border-radius: 15px;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+/* Popular Songs */
+.popular h3 {
+  font-size: 18px;
+  text-align: left;
+  color: #fff;
+}
+
+.popular-grid {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.popular-card {
+  width: 100px;
+  padding: 10px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  text-align: center;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease-in-out;
+}
+
+.popular-card:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+.popular-card img {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+}
+
+.popular-card p {
+  font-size: 12px;
+  margin-top: 8px;
+  color: #ddd;
+}
+
+/* Home Button */
+.home-btn {
+  margin-top: 30px;
+  padding: 12px 20px;
+  font-size: 14px;
+  background: #ff4d6d;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.home-btn:hover {
+  background: #ff1e56;
+  transform: scale(1.1);
+}

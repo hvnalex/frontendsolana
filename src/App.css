@@ -1,38 +1,127 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* General Styles */
+.homepage-container {
+  background-color: black;
   color: white;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
 }
 
-.App-link {
-  color: #61dafb;
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid gray;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #00ff7f;
 }
+
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-button {
+  padding: 10px 20px;
+  border: 1px solid #00ff7f;
+  background: transparent;
+  color: #00ff7f;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.nav-button.signup {
+  background-color: #00ff7f;
+  color: black;
+}
+
+.nav-button:hover {
+  background-color: #00ff7f;
+  color: black;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(to bottom, #222, black);
+}
+
+.hero h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.hero p {
+  color: gray;
+  margin: 10px 0;
+}
+
+.cta-button {
+  margin-top: 15px;
+  padding: 12px 24px;
+  background-color: #00ff7f;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #00cc66;
+}
+
+/* Trending Music */
+.trending {
+  padding: 40px;
+}
+
+.trending h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.music-grid {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.music-card {
+  background-color: #222;
+  padding: 20px;
+  border-radius: 5px;
+  width: 200px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.music-card:hover {
+  background-color: #333;
+}
+
+/* Sign Up Section */
+.signup-section {
+  text-align: center;
+  padding: 50px 20px;
+  background: #111;
+}
+
+.signup-section h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.signup-section p {
+  color: gray;
+}
+
