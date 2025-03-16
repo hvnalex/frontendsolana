@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import "./exploreMusic.css"
 
 const AudioPlayer = () => {
   const [isPlaying, setIsPlaying] = useState(false);

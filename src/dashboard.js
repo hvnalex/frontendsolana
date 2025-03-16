@@ -2,14 +2,22 @@ import React, { useEffect, useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import "./dashboard.css";
+import ReactPlayer from 'react-player';
 
 const API_URL = "https://api.deezer.com/chart/0/tracks?limit=4";
 
 const Dashboard = () => {
+  const [showPlayer, setShowPlayer] = useState(false);
+  const [selectedMedia, setSelectedMedia] = useState(null);
   const navigate = useNavigate();
   const location = useLocation();
   const [songs, setSongs] = useState([]);
   const [loading, setLoading] = useState(true);
+
+  const mediaList = [
+    { name: 'Sample Audio', url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3', type: 'audio' },
+    { name: 'Sample Video', url: 'https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4', type: 'video' }
+  ];
 
   useEffect(() => {
     setLoading(true);
@@ -41,6 +49,14 @@ const Dashboard = () => {
     }
   };
 
+  const handleExploreMusic = () => {
+    setShowPlayer(true);
+  };
+
+  const handleSelectMedia = (media) => {
+    setSelectedMedia(media);
+  };
+
   if (loading) {
     return <div>Loading...</div>;
   }
@@ -52,7 +68,6 @@ const Dashboard = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
     >
-      {/* Hero Section */}
       <motion.section
         className="hero"
         initial={{ scale: 0.8 }}
@@ -63,17 +78,36 @@ const Dashboard = () => {
         <p className="hero-description">
           Discover trending tracks, explore new artists, and enjoy your favorite music.
         </p>
-        <motion.button
-          className="cta-btn"
-          onClick={() => navigate("/explore")}
-          whileHover={{ scale: 1.1 }}
-          transition={{ type: "spring", stiffness: 200 }}
-        >
-          Explore Music
-        </motion.button>
+        <button className="cta-btn" onClick={handleExploreMusic}>Explore Music</button>
+
+        {/* Media List Appears After Clicking Explore Music */}
+        {showPlayer && (
+          <div className="media-list">
+            <h3>Select a Media File:</h3>
+            <div className="media-options">
+              {mediaList.map((media, index) => (
+                <button key={index} className="media-btn" onClick={() => handleSelectMedia(media)}>
+                  {media.name}
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Show Media Player if a media file is selected */}
+        {selectedMedia && (
+          <div className="player-wrapper">
+            <h4>Now Playing: {selectedMedia.name}</h4>
+            <ReactPlayer
+              url={selectedMedia.url}
+              controls={true}
+              width="100%"
+              height={selectedMedia.type === 'video' ? '360px' : '50px'}
+            />
+          </div>
+        )}
       </motion.section>
 
-      {/* Featured Song Section */}
       <motion.section
         className="featured"
         initial={{ scale: 0.8 }}
@@ -93,7 +127,6 @@ const Dashboard = () => {
         )}
       </motion.section>
 
-      {/* Popular Songs Section */}
       <section className="popular">
         <h3>Most Popular</h3>
         <motion.div className="popular-grid">
@@ -119,7 +152,6 @@ const Dashboard = () => {
         </motion.div>
       </section>
 
-      {/* Home Button */}
       <motion.button
         className="home-btn"
         onClick={() => navigate("/")}

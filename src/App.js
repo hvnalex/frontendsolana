@@ -16,7 +16,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/" element={<HomePage />} />
         <Route path="/VideoPlayer" element={<VideoPlayer />} /> 
-        <Route path="/ExploreMusic" element={<ExploreMusic />} /> 
+        <Route path="/ExploreMusic" element={<AudioPlayer />} /> 
       </Routes>
     </Router>
   );

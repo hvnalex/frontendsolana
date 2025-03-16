@@ -153,3 +153,18 @@
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   }
 }
+
+.player-wrapper {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 600px;
+  background-color: #222;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.player-wrapper h4 {
+  margin-bottom: 10px;
+  color: #e6b800;
+}
