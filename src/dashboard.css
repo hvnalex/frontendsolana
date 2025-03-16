@@ -1,108 +1,155 @@
-/* Smooth transition for animations */
-* {
-  transition: all 0.3s ease-in-out;
-}
-
-/* Neon-Themed Dashboard */
-body {
-  background: #0d0d0d;
-  color: #fff;
-  font-family: 'Poppins', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-}
-
-/* Main Dashboard */
 .dashboard-container {
-  width: 360px;
-  padding: 20px;
-  background: linear-gradient(135deg, #1a1a2e, #16213e);
-  border-radius: 20px;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
-  text-align: center;
-}
-
-/* Title */
-.dashboard-title {
-  font-size: 22px;
-  font-weight: 600;
+  font-family: 'Arial', sans-serif;
+  padding: 0 20px;
+  background-color: #1e1e1e;
   color: #fff;
-}
-
-/* Featured Song */
-.featured-song {
+  min-height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 15px;
-  border-radius: 15px;
-  backdrop-filter: blur(10px);
 }
 
-.featured-song img {
-  width: 80px;
-  height: 80px;
-  border-radius: 15px;
-  object-fit: cover;
-  margin-right: 15px;
-}
-
-/* Popular Songs */
-.popular h3 {
-  font-size: 18px;
-  text-align: left;
-  color: #fff;
-}
-
-.popular-grid {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
-}
-
-.popular-card {
-  width: 100px;
-  padding: 10px;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.1);
+.hero {
   text-align: center;
-  backdrop-filter: blur(10px);
+  padding: 50px 20px;
+  background-color: #2a2a2a;
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+.hero-title {
+  font-size: 3rem;
+  color: #e6b800;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  color: #bbb;
+  margin-bottom: 30px;
+}
+
+.cta-btn {
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  background-color: #e6b800;
+  color: #1e1e1e;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
   transition: transform 0.3s ease-in-out;
 }
 
-.popular-card:hover {
-  background: rgba(255, 255, 255, 0.2);
+.cta-btn:hover {
+  transform: scale(1.1);
+}
+
+.featured {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.featured-song {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.featured-song:hover {
   transform: scale(1.05);
 }
 
+.featured-song img {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.song-info h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.song-info p {
+  font-size: 1rem;
+  margin: 0;
+  color: #bbb;
+}
+
+.popular {
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.popular h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+}
+
+.popular-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.popular-card {
+  background-color: #2a2a2a;
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.popular-card:hover {
+  transform: scale(1.1);
+}
+
 .popular-card img {
-  width: 60px;
-  height: 60px;
+  width: 120px;
+  height: 120px;
   border-radius: 10px;
 }
 
 .popular-card p {
-  font-size: 12px;
-  margin-top: 8px;
-  color: #ddd;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 10px 0 5px;
 }
 
-/* Home Button */
+.popular-card small {
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
 .home-btn {
-  margin-top: 30px;
-  padding: 12px 20px;
-  font-size: 14px;
-  background: #ff4d6d;
-  color: white;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  background-color: #e6b800;
+  color: #1e1e1e;
   border: none;
-  border-radius: 20px;
+  border-radius: 30px;
   cursor: pointer;
+  transition: transform 0.3s ease-in-out;
 }
 
 .home-btn:hover {
-  background: #ff1e56;
   transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .popular-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
 }

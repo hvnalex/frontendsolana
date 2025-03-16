@@ -41,7 +41,7 @@ export default function HomePage() {
       <section className="hero">
         <h2>Discover the Sound of the Future</h2>
         <p>Stream music, explore new tracks, and dive into your favorite radio stations.</p>
-        <button className="cta-button">Get Started</button>
+        <button className="cta-button" onClick={() => navigate("/signin")}>Get Started</button>
       </section>
 
       {/* Trending Music Section */}
