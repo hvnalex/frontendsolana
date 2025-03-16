@@ -1,7 +1,7 @@
 .dashboard-container {
   font-family: 'Arial', sans-serif;
   padding: 0 20px;
-  background-color: #1e1e1e;
+  background-color: #121212;  /* Spotify's dark background */
   color: #fff;
   min-height: 100vh;
   display: flex;
@@ -12,7 +12,7 @@
 .hero {
   text-align: center;
   padding: 50px 20px;
-  background-color: #2a2a2a;
+  background-color: #1d1d1d;  /* Darker background for hero section */
   width: 100%;
   border-radius: 10px;
   margin-bottom: 40px;
@@ -20,7 +20,7 @@
 
 .hero-title {
   font-size: 3rem;
-  color: #e6b800;
+  color: #1db954;  /* Spotify green */
   font-weight: bold;
   margin-bottom: 15px;
 }
@@ -34,8 +34,8 @@
 .cta-btn {
   padding: 12px 30px;
   font-size: 1.1rem;
-  background-color: #e6b800;
-  color: #1e1e1e;
+  background-color: #1db954;  /* Spotify green */
+  color: #121212;
   border: none;
   border-radius: 30px;
   cursor: pointer;
@@ -103,7 +103,7 @@
 }
 
 .popular-card {
-  background-color: #2a2a2a;
+  background-color: #1d1d1d;  /* Dark background for cards */
   padding: 15px;
   border-radius: 10px;
   display: flex;
@@ -113,7 +113,7 @@
 }
 
 .popular-card:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .popular-card img {
@@ -136,8 +136,8 @@
 .home-btn {
   padding: 12px 30px;
   font-size: 1.1rem;
-  background-color: #e6b800;
-  color: #1e1e1e;
+  background-color: #1db954;  /* Spotify green */
+  color: #121212;
   border: none;
   border-radius: 30px;
   cursor: pointer;
@@ -158,7 +158,7 @@
   margin-top: 20px;
   width: 100%;
   max-width: 600px;
-  background-color: #222;
+  background-color: #1d1d1d;  /* Dark background for player */
   padding: 20px;
   border-radius: 10px;
   text-align: center;
@@ -166,5 +166,55 @@
 
 .player-wrapper h4 {
   margin-bottom: 10px;
-  color: #e6b800;
+  color: #1db954;  /* Spotify green */
+}
+
+/* New Styles for Media Buttons (Spotify-like buttons) */
+.media-btn {
+  background-color: #1db954;  /* Spotify green */
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.media-btn:hover {
+  background-color: #1aa34a;  /* Darker green on hover */
+  transform: scale(1.1);
+}
+
+.media-btn i {
+  font-size: 20px;
+}
+
+.player-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.control-btn {
+  background-color: transparent;
+  color: #1db954;
+  border: none;
+  font-size: 25px;
+  margin: 0 15px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  border-radius: 50%;
+  padding: 15px;
+}
+
+.control-btn:hover {
+  background-color: rgba(29, 185, 84, 0.1);  /* Light green hover effect */
+  transform: scale(1.1);
 }

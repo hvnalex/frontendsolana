@@ -60,6 +60,17 @@ const Dashboard = () => {
   if (loading) {
     return <div>Loading...</div>;
   }
+<div className="player-controls">
+  <button className="control-btn">
+    <i className="fas fa-backward"></i> {/* Rewind */}
+  </button>
+  <button className="control-btn">
+    <i className="fas fa-play-circle"></i> {/* Play/Pause */}
+  </button>
+  <button className="control-btn">
+    <i className="fas fa-forward"></i> {/* Forward */}
+  </button>
+</div>
 
   return (
     <motion.div
